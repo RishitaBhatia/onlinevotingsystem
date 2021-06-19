@@ -6,14 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 public class DBUtil 
 {
-	static Connection conn=null;
+    static Connection conn=null;
     static //put in static block so that connection gets established only once
     {
     	try
 		{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","RISHITA","honey");
+			conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","rishita","honey");
 			
 			if(!conn.isClosed())
 			{
